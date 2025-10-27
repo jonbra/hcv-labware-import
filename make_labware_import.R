@@ -33,7 +33,7 @@ lw_import <- final %>%
     percent_mapped_reads_minor_firstmapping = str_replace(percent_mapped_reads_minor_firstmapping, "\\.", ","),
     Minor_cov_breadth_min_5 = str_replace(Minor_cov_breadth_min_5, "\\.", ","),
     Minor_avg_depth = str_replace(Minor_avg_depth, "\\.", ","),
-    Minor_cov_breadth_min_10 = str_replace(Minor_cov_breadth_min_10, ",", ",")
+    Minor_cov_breadth_min_10 = str_replace(Minor_cov_breadth_min_10, "\\.", ",")
   ) %>%
   select(
     "Sample" = sampleName,
