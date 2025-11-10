@@ -56,7 +56,7 @@ lw_import <- final %>%
     "Average depth minor without duplicates:" = Minor_avg_depth,
     "Percent covered above depth=5 minor without duplicates:" = Minor_cov_breadth_min_5,
     "Percent covered above depth=9 minor without duplicates:" = Minor_cov_breadth_min_10,
-    "Script name and stringency:" = script_name_stringency,
+    "Script name and stringency:" = pipeline_version,
     "Total number of reads before trim:" = total_raw_reads,
     "Total number of reads after trim:" = total_trimmed_reads,
     "Majority quality:" = major_typable,
