@@ -33,7 +33,8 @@ lw_import <- final %>%
     percent_mapped_reads_minor_firstmapping = str_replace(percent_mapped_reads_minor_firstmapping, "\\.", ","),
     Minor_cov_breadth_min_5 = str_replace(Minor_cov_breadth_min_5, "\\.", ","),
     Minor_avg_depth = str_replace(Minor_avg_depth, "\\.", ","),
-    Minor_cov_breadth_min_10 = str_replace(Minor_cov_breadth_min_10, "\\.", ",")
+    Minor_cov_breadth_min_10 = str_replace(Minor_cov_breadth_min_10, "\\.", ","),
+    major_cov_firstmapping = str_replace(major_cov_firstmapping, "\\.", ",")
   ) %>%
   select(
     "Sample" = sampleName,
@@ -45,6 +46,8 @@ lw_import <- final %>%
     "Percent covered:" = Major_cov_breadth_min_1,
     "Number of mapped reads without duplicates:" = Reads_nodup_mapped_major,
     "Percent most abundant majority genotype" = percent_mapped_reads_major_firstmapping,
+    "Most abundant majority reference (first mapping):" = major_ref_firstmapping,
+    "Major coverage (first mapping):" = major_cov_firstmapping,
     "Average depth without duplicates:" = Major_avg_depth,
     "Percent covered above depth=5 without duplicates:" = Major_cov_breadth_min_5,
     "Percent covered above depth=9 without duplicates:" = Major_cov_breadth_min_10,
